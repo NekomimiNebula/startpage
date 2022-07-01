@@ -1,2 +1,1 @@
-# startpage
-My startpage for browsers
+# Code very messily edited from https://github.com/Jaredk3nt/homepage
