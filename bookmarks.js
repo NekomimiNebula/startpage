@@ -4,7 +4,6 @@ const bookmarks = [
     title: "Daily",
     links: [
       { name: "YouTube Music", url: "https://music.youtube.com" },
-      { name: "Tidal", url: "https://listen.tidal.com" },
       { name: "YouTube", url: "https://youtube.com" },
       { name: "Gmail", url: "https://mail.google.com" },
     ],
@@ -24,6 +23,7 @@ const bookmarks = [
       { name: "Mastodon", url: "https://equestria.social" },
       { name: "Anilist", url: "https://anilist.co" },
       { name: "Twitter", url: "https://twitter.com" },
+      { name: "Beehaw", url: "https://beehaw.org" },
     ],
   },
 ];
