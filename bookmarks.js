@@ -23,7 +23,7 @@ const bookmarks = [
       { name: "Mastodon", url: "https://equestria.social" },
       { name: "Anilist", url: "https://anilist.co" },
       { name: "Twitter", url: "https://twitter.com" },
-      { name: "Beehaw", url: "https://beehaw.org" },
+      { name: "Lemmy.ml", url: "https://lemmy.ml" },
     ],
   },
 ];
