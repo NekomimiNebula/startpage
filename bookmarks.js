@@ -22,7 +22,7 @@ const bookmarks = [
     links: [
       { name: "Mastodon", url: "https://equestria.social" },
       { name: "Anilist", url: "https://anilist.co" },
-      { name: "Twitter", url: "https://twitter.com" },
+      { name: "Bluesky", url: "https://bsky.app" },
       { name: "Lemmy.ml", url: "https://lemmy.ml" },
     ],
   },
