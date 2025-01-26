@@ -2,10 +2,9 @@
 
 :root {
   --fg: #ffffff;
-  --secondaryFg: #b3b3b3;
+  --secondaryFg: #ffffff;
   --containerBg: #272727;
   --searchBg: var(--containerBg);
-  --scrollbarColor: #3f3f3f;
   --fontFamily: 'Roboto Mono', monospace;
 }
 
@@ -60,7 +59,7 @@ body {
 
 .weather-container {
   width: 30%;
-  background-color: var(--containerBg);
+  backdrop-filter: blur(20px);
   padding: 1em;
   border-radius: 3px;
   font-family: var(--fontFamily);
@@ -102,7 +101,7 @@ body {
 
 .bookmark-set {
   padding: 1em;
-  background-color: var(--containerBg);
+  backdrop-filter: blur(20px);
   border-radius: 3px;
   font-family: var(--fontFamily);
   font-size: 0.85rem;
@@ -118,9 +117,6 @@ body {
   vertical-align: top;
   padding-right: 6px;
   box-sizing: border-box;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbarColor) #ffffff00;
 }
 
 .bookmark-inner-container::-webkit-scrollbar {
