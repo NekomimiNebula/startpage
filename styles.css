@@ -145,8 +145,14 @@ body {
   color: var(--secondaryFg);
   display: block;
   margin: 0.5em 0em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
 }
 
 .bookmark:hover {
   color: var(--fg);
+  transform: translateX(10px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
