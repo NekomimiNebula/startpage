@@ -1,10 +1,10 @@
 name: Generate images.json
 
 on:
-  push:
-    paths:
-      - 'images/**'
-      - '.github/scripts/generate-images-json.js'
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types:
+      - completed
 
 permissions:
   contents: write
