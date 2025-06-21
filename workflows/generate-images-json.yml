@@ -5,6 +5,12 @@ on:
     paths:
       - 'images/**'
       - '.github/scripts/generate-images-json.js'
+  pages:
+    types:
+      - deployed
+
+permissions:
+  contents: write
 
 jobs:
   build:
