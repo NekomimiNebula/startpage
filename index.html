@@ -153,32 +153,30 @@
         setInterval(updateClock, 100);
       };
 
-        document.addEventListener("keyup", (event) => {
-          if (event.keyCode == 32) {
-            // Spacebar code to open search
-            document.getElementById("search").style.display = "flex";
-            document.getElementById("search-field").focus();
-            document.getElementById("bookmark-container").style.display = "none";
-            document.getElementById("clock").style.display = "none";
-            document.querySelector(".weather-container").style.display = "none";
-
-          } else if (event.keyCode == 27 || event.keyCode == 127) { // Esc or DEL
-            // Esc to close search
-            document.getElementById("search-field").value = "";
-            document.getElementById("search-field").blur();
-            document.getElementById("search").style.display = "none";
-            // Restore layout here
-            document.getElementById("bookmark-container").style.display = "block";
-            document.getElementById("clock").style.display = "block";
-            document.querySelector(".weather-container").style.display = "block";
-          }
-        });
-        document.getElementById("search-field").addEventListener("blur", () => {
-          // This is now redundant, but you can keep it for safety
-          document.getElementById("bookmark-container").style.display = "block";
+      document.addEventListener("keyup", (event) => {
+        if (event.keyCode == 32) {
+          // Spacebar code to open search
+          document.getElementById("search").style.display = "flex";
+          document.getElementById("search-field").focus();
+          document.getElementById("bookmark-container").classList.add("hide");
+          document.getElementById("clock").style.display = "none";
+          document.querySelector(".weather-container").style.display = "none";
+        } else if (event.keyCode == 27 || event.keyCode == 127) { // Esc or DEL
+          // Esc to close search
+          document.getElementById("search-field").value = "";
+          document.getElementById("search-field").blur();
+          document.getElementById("search").style.display = "none";
+          // Restore layout here
+          document.getElementById("bookmark-container").classList.remove("hide");
           document.getElementById("clock").style.display = "block";
           document.querySelector(".weather-container").style.display = "block";
-        })
+        }
+      });
+      document.getElementById("search-field").addEventListener("blur", () => {
+        document.getElementById("bookmark-container").classList.remove("hide");
+        document.getElementById("clock").style.display = "block";
+        document.querySelector(".weather-container").style.display = "block";
+      })
     </script>
   </body>
 </html>
