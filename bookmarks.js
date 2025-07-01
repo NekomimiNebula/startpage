@@ -27,3 +27,22 @@ const bookmarks = [
     ],
   },
 ];
+
+function setupBookmarks() {
+  const bookmarkContainer = document.getElementById("bookmark-container");
+  bookmarkContainer.innerHTML = bookmarks
+    .map((b) => {
+      const html = ["<div class='bookmark-set'>"];
+      html.push(`<div class="bookmark-title">${b.title}</div>`);
+      html.push('<div class="bookmark-scroll-hide"><div class="bookmark-inner-container">');
+      html.push(
+        ...b.links.map(
+          (l) =>
+            `<a class="bookmark" href="${l.url}" target="_blank">${l.name}</a>`
+        )
+      );
+      html.push("</div></div></div>");
+      return html.join("");
+    })
+    .join("");
+}
