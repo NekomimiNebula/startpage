@@ -78,9 +78,8 @@
         }
       }
       // Get current time and format
-      function getTime() {
-        let date = new Date(),
-          min = date.getMinutes(),
+      function getTime(date) {
+        let min = date.getMinutes(),
           sec = date.getSeconds(),
           hour = date.getHours();
         let use12h = localStorage.getItem('clock12h') === 'true';
@@ -101,7 +100,10 @@
         );
       }
       function updateClock() {
-        document.getElementById("clock").innerHTML = getTime();
+        let now = new Date();
+        let timeStr = getTime(now);
+        let dateStr = now.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById("clock").innerHTML = "<div class='time'>" + timeStr + "</div><div class='date'>" + dateStr + "</div>";
       }
       // Handle Weather request
       function getWeather() {
