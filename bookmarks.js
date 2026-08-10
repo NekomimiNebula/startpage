@@ -13,7 +13,7 @@ const bookmarks = [
     links: [
       { name: "Nyaa.si", url: "https://nyaa.si" },
       { name: "Reddit", url: "https://reddit.com" },
-      { name: "Notion", url: "https://notion.so" },
+      { name: "Notion", url: "https://app.notion.com" },
       { name: "Jellyfin", url: "https://jellyfin.catgirls.cyou/" },
     ],
   },
